@@ -1,0 +1,12 @@
+import math
+r=6371.0
+lat1=math.radians(1.17249720)
+lon1=math.radians(103.5170524)
+lat2=math.radians(13.44121812)
+lon2=math.radians(100.31234696)
+dlon=lon2-lon1
+dlat=lat2-lat1
+a=math.sin(dlat/2)**2+math.cos(lat1)*math.cos(lat2)*math.sin(dlon/2)**2
+c=2*math.atan2(math.sqrt(a), math.sqrt(1-a))
+distance=r*c
+print(distance)
